@@ -1,0 +1,133 @@
+body {
+margin: 0;
+font-family: 'Segoe UI';
+color: white;
+overflow-x: hidden;
+}
+
+/* BACKGROUND */
+.bg-main {
+position: fixed;
+width: 100%;
+height: 100%;
+background: url("Images/Overview.jpg") no-repeat center/cover;
+z-index: -5;
+}
+
+/* OVERLAY */
+.overlay {
+position: fixed;
+width: 100%;
+height: 100%;
+background: rgba(2,6,23,0.85);
+z-index: -4;
+}
+
+/* FLOATING IMAGES */
+.floating-screens {
+position: fixed;
+width: 100%;
+height: 100%;
+z-index: -3;
+pointer-events: none;
+}
+
+.float {
+position: absolute;
+width: 220px;
+opacity: 0.22;
+border-radius: 10px;
+box-shadow: 0 0 12px rgba(34, 211, 238, 0.15);
+animation: floatAnim 6s infinite ease-in-out;
+}
+
+.f1 { top: 20%; left: 10%; }
+.f2 { top: 60%; left: 20%; }
+.f3 { top: 30%; right: 15%; }
+.f4 { bottom: 10%; right: 10%; }
+.f5 { top: 80%; right: 30%; }
+
+@keyframes floatAnim {
+0%, 100% { transform: translateY(0px); }
+50% { transform: translateY(-15px); }
+}
+
+/* WAVE */
+#graphCanvas {
+position: fixed;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+z-index: -2;
+opacity: 0.4;
+}
+
+/* HEADER */
+header {
+position: fixed;
+width: 100%;
+background: rgba(2,6,23,0.85);
+display: flex;
+justify-content: space-between;
+padding: 15px 20px;
+z-index: 100;
+box-sizing: border-box;
+}
+
+nav a {
+margin-left: 12px;
+}
+
+/* HERO */
+.hero {
+padding: 140px 80px 40px;
+}
+
+/* SECTIONS */
+.split {
+display: flex;
+padding: 30px 80px;
+gap: 20px;
+}
+
+.split.reverse {
+flex-direction: row-reverse;
+}
+
+.left, .right {
+flex: 1;
+}
+
+/* 🔥 ALIGNMENT FIX (ONLY ADDITION) */
+#resume .right {
+display: flex;
+align-items: center;
+}
+
+/* CARDS */
+.card {
+background: #1e293b;
+padding: 15px;
+margin-bottom: 10px;
+border-radius: 6px;
+}
+
+/* BUTTON */
+.btn {
+background: #22d3ee;
+padding: 10px 15px;
+color: black;
+text-decoration: none;
+border-radius: 5px;
+}
+
+.secondary {
+background: transparent;
+border: 1px solid #22d3ee;
+color: #22d3ee;
+}
+
+a {
+color: #22d3ee;
+}
